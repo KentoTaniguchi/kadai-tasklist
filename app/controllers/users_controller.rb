@@ -1,16 +1,4 @@
 class UsersController < ApplicationController
-  
-  
-  def index
-    if logged_in?
-      @task = current_user.tasks.build
-　　　@tasks = current_user.tasks.order(id: :desc).page(params[:page])
-    end
-  end
-
-  def show
-  end
-
   def new
     @user = User.new
   end
